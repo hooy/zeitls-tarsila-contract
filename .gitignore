@@ -1,0 +1,23 @@
+### IntelliJ IDEA ###
+.idea/
+#.vscode/
+*.iws
+*.iml
+*.ipr
+/out/
+
+### Mac OS
+.DS_Store
+
+### Environments
+.env
+.venv
+env/
+contractsx/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.secret
+
+node_modules/

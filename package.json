@@ -1,0 +1,36 @@
+{
+  "name": "ldfi-staking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "verify": "truffle run verify",
+    "migrate-testbsc": "truffle migrate --network testnet",
+    "verify-testbsc": "truffle run verify --network testnet",
+    "update-testbsc": "truffle migrate --network testnet -f 3",
+    "migrate-bsc": "truffle migrate --network bsc",
+    "verify-bsc": "truffle run verify --network bsc",
+    "update-bsc": "truffle migrate --network bsc -f 3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/contracts": "^0.5.1",
+    "@openzeppelin/contracts": "^4.7.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.2",
+    "@openzeppelin/truffle-upgrades": "^1.15.0",
+    "@pancakeswap/pancake-swap-lib": "0.0.4",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "bigdecimal": "^0.6.0",
+    "dotenv": "^16.0.3",
+    "ganache": "^7.0.3",
+    "truffle": "^5.11.5",
+    "web3": "^1.7.1"
+  },
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.5.32"
+  }
+}
