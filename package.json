@@ -28,6 +28,7 @@
     "dotenv": "^16.0.3",
     "ganache": "^7.0.3",
     "truffle": "^5.11.5",
+    "truffle-hdwallet-provider": "^1.0.17",
     "web3": "^1.7.1"
   },
   "devDependencies": {

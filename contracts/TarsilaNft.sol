@@ -15,6 +15,7 @@ contract TarsilaNft is Ownable, ERC721Enumerable {
 
     uint256[] public metadataIds;
     string public baseUri = "https://api.zeitls.io/tarsila/variations/";
+    string _contractURI = "Tarsila Test";
     uint256 public mintPrice = 0.3 ether;
 
     IProxyRegistry public immutable proxyRegistry;
@@ -36,7 +37,8 @@ contract TarsilaNft is Ownable, ERC721Enumerable {
         emit TokenBurned(tokenId);
     }
 
-    function mint(address target, uint256[] calldata ids) payable external {
+    function mint(address target, uint256[] calldata ids, uint256 quantity) payable external {
+        require(quantity > 0, "Quantity must be > 0");
         require(ids.length > 0, "Invalid ids list");
         if (owner() != _msgSender()) {
             require(msg.value >= mintPrice * ids.length, "Not enough eth sent.");
@@ -66,6 +68,10 @@ contract TarsilaNft is Ownable, ERC721Enumerable {
 
     function setBaseUri(string memory newBaseUri) external onlyOwner {
         baseUri = newBaseUri;
+    }
+
+    function contractURI() public view returns (string memory) {
+        return _contractURI;
     }
 
     function withdrawERC20(IERC20 _tokenContract) external onlyOwner {
