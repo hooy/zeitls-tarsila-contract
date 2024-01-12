@@ -15,17 +15,25 @@ module.exports = {
         host: "127.0.0.1",
         port: 8545,
         network_id: "*",
-        gas: 30000000
+        gas: 100000000
     },
     sepolia: {
-        provider: () => new HDWalletProvider(mnemonic, `https://rpc.sepolia.org/`, 2),
+        provider: () => new HDWalletProvider(mnemonic, `https://sepolia.infura.io/v3/e9fe1139119f44fc8813c6fe327765d8`),
         network_id: 11155111,
         confirmations: 2,
-        timeoutBlocks: 200,
+        timeoutBlocks: 20,
         skipDryRun: true,
-        networkCheckTimeout: 1000000,
-        gas: 30000000,
-        gasPrice: 3500000000
+        networkCheckTimeout: 100000,
+        gas: 216156,
+        gasPrice: 900000000000,
+    },
+    goerli: {
+      provider: () => new HDWalletProvider(mnemonic, `https://goerli.infura.io/v3/e9fe1139119f44fc8813c6fe327765d8`),
+      network_id: 5,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      networkCheckTimeout: 1000000,
     },
     eth: {
         provider: () => new HDWalletProvider(mnemonic, `https://ethereum.publicnode.com`, 2),
