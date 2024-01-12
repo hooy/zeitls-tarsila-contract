@@ -30,6 +30,14 @@ module.exports = {
       gas: 2500000,
       gasPrice: 68000000000
     },
+    goerli: {
+      provider: () => new HDWalletProvider(mnemonic, `https://goerli.infura.io/v3/e9fe1139119f44fc8813c6fe327765d8`),
+      network_id: 5,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      networkCheckTimeout: 1000000,
+    },
     eth: {
       provider: () => new HDWalletProvider(mnemonic, `https://ethereum.publicnode.com`, 2),
       network_id: 1,
