@@ -30,7 +30,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.17;\n\ninterface IProxyRegistry {\n    function proxies(address) external view returns (address);\n}",
-  "sourcePath": "/home/max/pro/solidity/tarsila/contracts/IProxyRegistry.sol",
+  "sourcePath": "C:\\P\\zeitls-tarsila-contract\\contracts\\IProxyRegistry.sol",
   "ast": {
     "absolutePath": "project:/contracts/IProxyRegistry.sol",
     "exportedSymbols": {
@@ -166,7 +166,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-01-01T21:13:35.585Z",
+  "updatedAt": "2024-01-12T12:13:47.931Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

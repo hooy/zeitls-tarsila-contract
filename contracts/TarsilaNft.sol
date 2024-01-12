@@ -15,7 +15,7 @@ contract TarsilaNft is Ownable, ERC721Enumerable {
 
     uint256[] public metadataIds;
     string public baseUri = "https://api.zeitls.io/tarsila/variations/";
-    string _contractURI = "Tarsila Test";
+    string _contractURI = baseUri;
     uint256 public mintPrice = 0.3 ether;
 
     IProxyRegistry public immutable proxyRegistry;
